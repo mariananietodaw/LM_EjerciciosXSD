@@ -1,0 +1,36 @@
+1) "Capítulo 0", "Capítulo 1", "Capítulo 2"... "Capítulo 9". (Solo se permite un dígito). 
+
+r: la expresione regulare es \d Cualquier dígito del 0 al 9.
+
+2) "Capítulo 0", "Capítulo 1", "Capítulo 2"... "Capítulo 99". (Uno o dos dígitos).  
+
+r: Capítulo \d{1,2}
+
+3) "Capítulo 1", "Capítulo 2", "Capítulo 3"... "Capítulo 99". (No se permite "Capítulo
+0")
+
+r: Capítulo [1|2|3|4|5|6|7|8|9]
+
+4)"Capítulo 0", "Capítulo 1", "Capítulo 2"... "Capítulo 99"... "Capítulo 100"... (Uno o
+más dígitos).
+
+r: la expresione regulare es Capítulo \d+
+
+5) Cualquier valor de dos caracteres, cuyo primer carácter sea distinto de un dígito (0-9) y cuyo segundo carácter
+sea "Z": "aZ"... "zZ", "AZ"... "ZZ", "?Z", "=Z", "*Z"...
+
+r: la expresione regulare es \D[Z]
+
+6) "ABBC", "ABBBC", "ABBBBC", "ABBBBBC". 
+r: la expresione regulare es AB{2,5}C
+
+7) El primer carácter debe ser "R". A continuación, deben aparecer obligatoriamente dos ó más "S".
+Finalmente, puede aparecer o no, un dígito del 3 al 8: "RSS", "RSSS"... "RSS3"... "RSS8", "RSSS3"...
+"RSSS8"... "RSSSSSSSSSSS7"...
+
+r: la expresione regulare es RS{2,}[3-8]?
+
+8) Cualquier valor que contenga en primer lugar "COD", después tres dígitos (0-9) y, finalmente, uno o más
+caracteres cualesquiera: "COD645pera", "COD646manzana
+
+r: la expresione regulare es COD\d\d\d.+

@@ -5,7 +5,7 @@
     <xs:element name="ejercicio4">
         <xs:complexType>
            <xs:sequence>    
-                <xs:element name="ciudade" type="xs:string"/>              
+                <xs:element name="ciudad" type="xs:string"/>              
                 <xs:element name="fecha-de-nacimiento" type="xs:date"/>             
                 <xs:element name="hora" type="xs:time"/>             
                 <xs:element name="nota" type="xs:decimal"/>             
